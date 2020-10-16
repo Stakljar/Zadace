@@ -58,7 +58,8 @@ U ovom trenutku, za probu, pokušajte repozitorij kreiran u prošlom koraku podi
 
 ## Korištenje projekta
 
-Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati (ili eventualno skinuti kao .zip ili .rar datoteku te započeti s radom, ali pokušajte klonirati). Kada želite spremiti stanje projekta, to radite najprije dodavanjem svih promjena naredbom _add_ i zatim kreiranjem trenutne slike naredbom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. 
+Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](https://github.com/zoricbruno/oop_ferit_zadace). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati (ili eventualno skinuti kao .zip ili .rar datoteku te započeti s radom, ali pokušajte klonirati). Kada želite spremiti stanje projekta, to radite najprije dodavanjem svih promjena naredbom _add_ i zatim kreiranjem trenutne slike naredbom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. 
+Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](https://github.com/zoricbruno/oop_ferit_zadace). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati (ili eventualno skinuti kao .zip ili .rar datoteku te započeti s radom, ali pokušajte klonirati). Kada želite spremiti stanje projekta, to radite najprije dodavanjem svih promjena naredbom _add_ i zatim kreiranjem trenutne slike naredbom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. 
 
 ```
 git push -u origin --all

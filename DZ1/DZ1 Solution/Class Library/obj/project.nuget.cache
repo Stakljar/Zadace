@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "U4WSJ/gOhJdty5WTrOom8yNQWQxu9S/rRpTDPNMqyA5bxw7G9PB2ZJnM1hh6ebDrUaGsngYyt7NDaMMSN5rOzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\DZ1 Solution\\Class Library\\Class Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

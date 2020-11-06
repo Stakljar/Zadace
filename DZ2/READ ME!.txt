@@ -1,0 +1,1 @@
+When you download you need to set DZ2 as startup project I don't know why isn't this as default because I put it so.

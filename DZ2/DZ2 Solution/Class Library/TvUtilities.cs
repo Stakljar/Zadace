@@ -6,7 +6,6 @@ namespace Class_Library
 {
     public static class TvUtilities
     {
-        static int count = 10;
         public static double GenerateRandomScore()
         {
             Random random = new Random();
@@ -19,30 +18,26 @@ namespace Class_Library
             int viewers = int.Parse(lines[0]);
             double totalScore = double.Parse(lines[1]);
             double maxScore = double.Parse(lines[2]);
-            int number = int.Parse(lines[3]);
+            int lineUpNumber = int.Parse(lines[3]);
             TimeSpan duration = TimeSpan.Parse(lines[4]);
             string name = lines[5];
-            return new Episode(viewers, totalScore, maxScore, new Description(number, duration, name));
+            return new Episode(viewers, totalScore, maxScore, new Description(lineUpNumber, duration, name));
         }
 
         public static void Sort(Episode[] episodes)
         {
-            int sorted = 1;
-            Episode support = null;
-            while (sorted != 0)
+            
+            Episode temp = null;
+            for(int i = 1; i < episodes.Length; i++)
             {
-                sorted = 0;
-                for (int i = 0; i < episodes.Length - 1; i++)
+                temp = episodes[i];
+                int j = i - 1;
+                    while(j>=0 && episodes[j].GetAverageScore() < temp.GetAverageScore())
                 {
-                    if (episodes[i] < episodes[i + 1])
-                    {
-                        sorted = 1;
-                        support = episodes[i];
-                        episodes[i] = episodes[i + 1];
-                        episodes[i + 1] = support;
-                    }
-
+                    episodes[j + 1] = episodes[j];
+                    j = j - 1;
                 }
+                episodes[j + 1] = temp;   
 
             }
         }

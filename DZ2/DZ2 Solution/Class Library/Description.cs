@@ -6,21 +6,21 @@ namespace Class_Library
 {
     public class Description
     {
-        int number;
+        int lineUpNumber;
         TimeSpan duration;
         string name;
         public Description() : this(0, new TimeSpan(0, 0, 0), "")
         {
         }
-        public Description(int number, TimeSpan duration, string name)
+        public Description(int lineUpNumber, TimeSpan duration, string name)
         {
-            this.number = number;
+            this.lineUpNumber=lineUpNumber;
             this.duration = duration;
             this.name = name;
         }
         public override string ToString()
         {
-            return $"{number},{duration},{name}";
+            return $"{lineUpNumber},{duration},{name}";
         }
 
     }

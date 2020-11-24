@@ -40,7 +40,7 @@ namespace Class_Library
         }
         public override string ToString()
         {
-            return $"{viewers},{Math.Round(totalScore, 4)},{Math.Round(maxScore, 2)},{description}";
+            return $"{viewers},{totalScore.ToString("F4")},{maxScore.ToString("F2")},{description}";
         }
         public static bool operator <(Episode a, Episode b)
         {

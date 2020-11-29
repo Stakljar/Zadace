@@ -44,11 +44,11 @@ namespace Class_Library
         }
         public static Episode[] LoadEpisodesFromFile(string fileName)
         {
-            string[] episodesInputs = File.ReadAllLines(fileName);
-            Episode[] episodes = new Episode[episodesInputs.Length];
-            for(int i = 0; i < episodesInputs.Length; i++)
+            string[] allLines = File.ReadAllLines(fileName);
+            Episode[] episodes = new Episode[allLines.Length];
+            for(int i = 0; i < allLines.Length; i++)
             {
-                string[] currentLines = episodesInputs[i].Split(',');
+                string[] currentLines = allLines[i].Split(',');
                 int viewers = int.Parse(currentLines[0]);
                 double totalScore = double.Parse(currentLines[1]);
                 double maxScore = double.Parse(currentLines[2]);

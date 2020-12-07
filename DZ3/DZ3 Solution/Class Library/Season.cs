@@ -30,6 +30,10 @@ namespace Class_Library
             {
                 return episodes[wordIndex];
             }
+            set
+            {
+                episodes[wordIndex] = value;
+            }                
         }
         public override string ToString()
         {   int totalViewers = 0;

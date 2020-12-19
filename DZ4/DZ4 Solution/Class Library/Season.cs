@@ -54,7 +54,7 @@ namespace Class_Library
         public void Remove(string name)
         {
             int checker = 0;
-            for (int i=0; i < episodes.Count; i++)
+            for (int i = 0; i < episodes.Count; i++)
                 if (episodes[i].ToString().Contains(name))
                 {
                     checker = 1;

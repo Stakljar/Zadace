@@ -104,7 +104,7 @@ namespace InternetResources
                 }
                 for (int j = 0; j < 2; j++)
                 {
-                    if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 1] == '/')
+                    if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 2] == '>')
                     {
                         wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 4);
                     }

@@ -27,7 +27,7 @@ namespace InternetResources
         {
             string spacing = ", ";
             string  overview = $"\n\n\n\n\n\n\n\n\n\n\nName: {Name}\nLanguage: {Language}\nGenre: {string.Join(spacing, Genres)}\n\nDescription:\n";
-            if (summary == null)
+            if (summary == null || summary == "")
                 summary = "No description accessible.";
             for (int i = 0; i < Summary.Length; i++)
             {     

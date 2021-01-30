@@ -45,6 +45,13 @@ namespace InternetResources
                     if(i != 0) i--;
                 }
             }
+            for (int i = 0; i < 2; i++)
+            {
+                if (show.Summary[i] == '<' && show.Summary[i + 2] == '>')
+                {
+                    show.Summary = show.Summary.Remove(i, 3);
+                }
+            }
             try
             {
                 netService = new WebClient().DownloadString("http://api.tvmaze.com/shows/" + $"{show.Id}" + "/seasons");
@@ -73,9 +80,9 @@ namespace InternetResources
                 wholeShowEpisodes[0].Summary = "No preview available.";
 
             }
-            for (int i = 0; i < wholeShowEpisodes.Count; i++)
+           for (int i = 0; i < wholeShowEpisodes.Count; i++)
             {
-                if (wholeShowEpisodes[i].Summary == null)
+                if (wholeShowEpisodes[i].Summary == null || wholeShowEpisodes[i].Summary == "")
                 {
                     wholeShowEpisodes[i].Summary = "No preview accessible.";
                 }
@@ -85,15 +92,23 @@ namespace InternetResources
                     if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 1] == '/')
                     {
                         wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 4);
-                        if(j != 0) j--;
+                        if (j != 0) j--;
 
                     }
                     if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 2] == '>')
                     {
                         wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 3);
-                        if(j != 0) j--;
+                        if (j != 0) j--;
 
                     }
+                }
+                for (int j = 0; j < 2; j++)
+                {
+                    if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 1] == '/')
+                    {
+                        wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 4);
+                    }
+
                 }
             }
 

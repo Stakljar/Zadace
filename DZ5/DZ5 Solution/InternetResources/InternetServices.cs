@@ -60,9 +60,6 @@ namespace InternetResources
             {
                 show.Seasons = new List<Season> { new Season() };
                 show.Seasons[0].Number = 0;
-
-
-
             }
             List<Episode> wholeShowEpisodes = new List<Episode>();
             try

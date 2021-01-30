@@ -19,19 +19,21 @@ namespace InternetResources
 
         public override string ToString()
         {
+            int i;
             string overview = $"Episode {Number}. {Name}\n\n";
             if (summary == null || summary == "")
                 summary = "No preview accessible.";
-            for (int i = 0; i < Summary.Length; i++)
+            for (i = 0; i < Summary.Length - 1 ; i++)
             {
                 overview += Summary[i];
                 if (i % 75 == 0 && i != 0)
                 {
-                    if (summary[i] != ' ' && summary[i + 1] != ' ')
+                    if (summary[i] != ' ' && summary[i + 1] != ' ' && summary[i] != '.' && summary[i + 1 ] != '.' && summary[i] != ',' && summary[i + 1] != ',' && summary[i] != '?' && summary[i + 1] != '?')
                         overview += "-";
                     overview += "\n";
                 }
             }
+            overview += Summary[i];
             overview += "\n";
             return overview;
         }

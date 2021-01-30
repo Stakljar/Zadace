@@ -27,6 +27,10 @@ namespace InternetResources
                 show.Genres = new List<string> { "N/A" };
                 show.Summary = "No description available.";
             }
+            if(show.Summary == null)
+            {
+                show.Summary = "No description accessible.";
+            }
             for (int i = 0; i < show.Summary.Length - 3; i++)
             {
 

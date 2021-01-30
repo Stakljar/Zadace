@@ -33,12 +33,12 @@ namespace InternetResources
                 if (show.Summary[i] == '<' && show.Summary[i + 1] == '/')
                 {
                     show.Summary = show.Summary.Remove(i, 4);
-                    i--;
+                    if(i != 0) i--;
                 }
                 if (show.Summary[i] == '<' && show.Summary[i + 2] == '>')
                 {
                     show.Summary = show.Summary.Remove(i, 3);
-                    i--;
+                    if(i != 0) i--;
                 }
             }
             try
@@ -84,13 +84,13 @@ namespace InternetResources
                     if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 1] == '/')
                     {
                         wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 4);
-                        j--;
+                        if(j != 0) j--;
 
                     }
                     if (wholeShowEpisodes[i].Summary[j] == '<' && wholeShowEpisodes[i].Summary[j + 2] == '>')
                     {
                         wholeShowEpisodes[i].Summary = wholeShowEpisodes[i].Summary.Remove(j, 3);
-                        j--;
+                        if(j != 0) j--;
 
                     }
                 }

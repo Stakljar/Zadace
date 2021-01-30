@@ -50,6 +50,7 @@ namespace DZ5
             try
             {
                 ShowImage.Source = new BitmapImage(new Uri(show.image.Medium, UriKind.Absolute));
+                //potrebno isključiti kvačicu za exception da breaka program ako se dogodi iznimka
             }
             catch (NullReferenceException exception)
             {

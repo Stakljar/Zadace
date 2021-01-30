@@ -72,7 +72,7 @@ namespace InternetResources
                 wholeShowEpisodes[0].Summary = "No preview available.";
 
             }
-            for (int i = 0; i < wholeShowEpisodes.Count - 1; i++)
+            for (int i = 0; i < wholeShowEpisodes.Count; i++)
             {
                 if (wholeShowEpisodes[i].Summary == null)
                 {

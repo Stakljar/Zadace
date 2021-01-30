@@ -1,0 +1,109 @@
+﻿<Window x:Class="DZ5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DZ5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="ShowLabel"
+ Grid.Column="1" Grid.Row="1"
+ FontSize="24"
+ TextBlock.Foreground="Navy"
+ Text="Input show name:"/>
+
+        <TextBox Name="ShowInput"
+ Grid.Column="1" Grid.Row="2"
+ TextBlock.Foreground="Navy"
+ FontSize="24"
+ Text="" />
+
+        <Image Name="ShowPicture"
+ Grid.Column="3" Grid.Row="1"
+ RenderSize="500,500"
+ TextBlock.Foreground="Navy" Margin="319,0,0,0" 
+ Grid.RowSpan="3" RenderTransformOrigin="1.093,1.028"
+ />
+
+        <Button Name="Search"
+ Grid.Column="1" Grid.Row="3"
+ TextBlock.Foreground="Snow"
+ Background="MediumSlateBlue"
+ FontSize="24"
+ Margin="1,10,0,0"
+ Click="SearchTitle_Click"
+ Content="Search by name" />
+
+        <Button Name="Seasons"
+ TextBlock.Foreground="Indigo"               
+ Background="Azure"
+ Grid.Column="1" Grid.Row="5"
+ FontSize="24"
+ Margin="0,10,1,0"
+ Click="Seasons_Click"
+ Content="Show seasons" />
+
+        <Button Name="Episodes"
+ TextBlock.Foreground="Indigo"               
+ Background="Azure"               
+ Grid.Column="1" Grid.Row="5"
+ FontSize="24"
+ Margin="1,10,0,0"
+ Click="Episodes_Click"
+ Content="Show episodes" />
+
+        <Button Name="Back"              
+ Background="MidnightBlue" Grid.Row="6"
+ TextBlock.Foreground="Azure"
+ FontSize="24"
+ Margin="1,10,0,149"
+ Click="Back_Click"
+ Content="Go back" Grid.Column="1" />
+
+        <ListBox Name="ShowInfo"
+ Grid.Column="3" Grid.Row="1"
+ Grid.ColumnSpan="1"
+ Grid.RowSpan="12"/>
+
+        <ListBox Name="SeasonsList"
+ Grid.Column="3" Grid.Row="1"
+ Grid.RowSpan="12"
+ SelectionChanged="SeasonList_SelectionChanged"/>
+
+        <ListBox Name="EpisodesList"
+ Grid.Column="3" Grid.Row="1"
+ Grid.RowSpan="12"/>
+
+        <Image Name="ShowImage"
+ Grid.Column="3" Grid.Row="1"
+ HorizontalAlignment="Left"
+ Grid.RowSpan="5" Margin="10,10,0,0" Width="104"   />
+
+
+    </Grid>
+</Window>

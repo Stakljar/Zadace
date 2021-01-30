@@ -20,7 +20,7 @@ namespace InternetResources
         public override string ToString()
         {
             string overview = $"Episode {Number}. {Name}\n\n";
-            if (summary == null)
+            if (summary == null || summary == "")
                 summary = "No preview accessible.";
             for (int i = 0; i < Summary.Length; i++)
             {

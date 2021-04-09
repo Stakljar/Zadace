@@ -115,5 +115,14 @@ namespace DZ5
 
             }
         }
+        private void ShowInput_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Enter)
+            {
+                SearchTitle_Click(this, new RoutedEventArgs());
+            }
+            
+        }
     }
 }

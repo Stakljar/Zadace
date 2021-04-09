@@ -41,6 +41,7 @@
  Grid.Column="1" Grid.Row="2"
  TextBlock.Foreground="Navy"
  FontSize="24"
+ Keyboard.KeyDown="ShowInput_KeyDown"
  Text="" />
 
         <Image Name="ShowPicture"

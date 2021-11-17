@@ -5,7 +5,7 @@ using Class_Library;
 
 namespace Dz1
 {
-	public class Main_Class
+	public class Program
 	{
 		static double GenerateRandomScore()
 		{

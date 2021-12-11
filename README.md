@@ -24,7 +24,7 @@ inicijalizirajte prazan repozitorij. Zatim, korištenjem
 ```
 git status
 ```
-provjerite trenutno stanje repozitorija. Trebao bi biti prazan. Ako ga otvorite u file exploreru s uključenim prikazom skrivenih datoteka, onda bi trebao biti vidljiv samo skriveni direktorij .git. U direktoriju "Projekt" kreirajte tekstualnu datoteku "info.txt" s vlastitim imenom i prezimenom zapisanim unutra. Nakon toga, provjerite stanje repozitorija.
+provjerite trenutno stanje repozitorija. Trebao bi biti prazan. Ako ga otvorite u file exploreru s uključenim prikazom skrivenih datoteka, onda bi trebao biti vidljiv samo skriveni direktorij .git. U direktoriju "Projekt" kreirajte tekstualnu datoteku "info.txt" s vlastitim imenom i prezimenom zapisanim unutra. Nakon toga, provjerite stanje repozitorija.!
 
 Git prati stanje svih datoteka u direktoriju koje nisu ignorirane. Crvenom bojom teksta označene su datoteke koje su izmijenjene (dodane, obrisane, promijenjenog sadržaja). Ono što git omogućuje je kreiranje slike (_snapshota_) cjelokupnog sadržaja direktorija i njene pohrane (stvara se točka u vremenu na koju se moguće vratiti). Da bi točka mogla biti stvorena, datoteke je potrebno dodati u tzv. _staging_ područje. Ovo se postiže naredbom
 ```

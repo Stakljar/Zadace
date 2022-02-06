@@ -8,14 +8,17 @@ namespace Class_Library
     public class FilePrinter : IPrinter
     {
         string outputFileName;
+        
         public FilePrinter() : this("")
         {
 
         }
+        
         public FilePrinter(string outputFileName)
         {
             this.outputFileName = outputFileName;
         }
+        
         public void Print(string text)
         {
             using (StreamWriter streamwriter = new StreamWriter(outputFileName))

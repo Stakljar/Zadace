@@ -8,10 +8,12 @@ namespace Class_Library
         private double totalScore;
         private double maxScore;
         Description description;
+        
         public Episode() : this(0, 0, 0, new Description())
         {
 
         }
+        
         public Episode(int viewers, double totalScore, double maxScore, Description description)
         {
             this.viewers = viewers;
@@ -19,6 +21,7 @@ namespace Class_Library
             this.maxScore = maxScore;
             this.description = description;
         }
+        
         public void AddView(double random)
         {
             viewers++;
@@ -26,28 +29,34 @@ namespace Class_Library
             if (maxScore < random) maxScore = random;
 
         }
+        
         public double GetMaxScore()
         {
             return maxScore;
         }
+        
         public double GetAverageScore()
         {
             return totalScore / viewers;
         }
+        
         public int GetViewerCount()
         {
             return viewers;
         }
+        
         public override string ToString()
         {
             return $"{viewers},{totalScore},{maxScore},{description}";
         }
+        
         public static bool operator <(Episode a, Episode b)
         {
             if (a.GetAverageScore() > b.GetAverageScore())
                 return false;
             else return true;
         }
+        
         public static bool operator >(Episode a, Episode b)
         {
             if (a.GetAverageScore() > b.GetAverageScore())

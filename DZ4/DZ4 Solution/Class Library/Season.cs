@@ -15,12 +15,14 @@ namespace Class_Library
             season = 0;
             episodes = new List<Episode>();
         }
+        
         public Season(int season, List<Episode> list)
         {
             episodes = new List<Episode>();
             episodes.AddRange(list);
             this.season = season;
         }
+        
         public Season(Season other)
         {
             episodes = new List<Episode>();
@@ -37,6 +39,7 @@ namespace Class_Library
             }
             season = other.season;
         }
+        
         IEnumerator<Episode> IEnumerable<Episode>.GetEnumerator()
         {
             return ((IEnumerable<Episode>)episodes).GetEnumerator();
@@ -51,6 +54,7 @@ namespace Class_Library
         {
             episodes.Add(episode);
         }
+        
         public void Remove(string name)
         {
             int checker = 0;
@@ -65,6 +69,7 @@ namespace Class_Library
                 throw new TvException("No such episode found.", name);
                     
         }
+        
         public Episode this[int wordIndex]
         {
             get

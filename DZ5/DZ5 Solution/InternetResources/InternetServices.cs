@@ -27,24 +27,27 @@ namespace InternetResources
                 show.Genres = new List<string> { "N/A" };
                 show.Summary = "No description available.";
             }
+
             if(show.Summary == null || show.Summary == "")
             {
                 show.Summary = "No description accessible.";
             }
+
             for (int i = 0; i < show.Summary.Length - 3; i++)
             {
 
                 if (show.Summary[i] == '<' && show.Summary[i + 1] == '/')
                 {
                     show.Summary = show.Summary.Remove(i, 4);
-                    if(i != 0) i--;
+                    if (i != 0) i--;
                 }
                 if (show.Summary[i] == '<' && show.Summary[i + 2] == '>')
                 {
                     show.Summary = show.Summary.Remove(i, 3);
-                    if(i != 0) i--;
+                    if (i != 0) i--;
                 }
             }
+
             for (int i = 0; i < 2; i++)
             {
                 if (show.Summary[i] == '<' && show.Summary[i + 2] == '>')
@@ -52,9 +55,10 @@ namespace InternetResources
                     show.Summary = show.Summary.Remove(i, 3);
                 }
             }
+
             try
             {
-                netService = new WebClient().DownloadString("http://api.tvmaze.com/shows/" + $"{show.Id}" + "/seasons");
+                netService = new WebClient().DownloadString("https://api.tvmaze.com/shows/" + $"{show.Id}" + "/seasons");
                 show.Seasons = JsonConvert.DeserializeObject<List<Season>>(netService);
 
             }
@@ -71,7 +75,7 @@ namespace InternetResources
             List<Episode> wholeShowEpisodes = new List<Episode>();
             try
             {
-                netService = new WebClient().DownloadString("http://api.tvmaze.com/shows/" + $"{show.Id}" + "/episodes");
+                netService = new WebClient().DownloadString("https://api.tvmaze.com/shows/" + $"{show.Id}" + "/episodes");
                 wholeShowEpisodes = JsonConvert.DeserializeObject<List<Episode>>(netService);
             }
             catch (WebException e)
@@ -111,13 +115,12 @@ namespace InternetResources
 
                 }
             }
-
-            foreach (var season in show.Seasons)
+           foreach(var season in show.Seasons)
             {
                 List<Episode> seasonEpisodes = new List<Episode>();
-                foreach (var episode in wholeShowEpisodes)
+                foreach(var episode in wholeShowEpisodes)
                 {
-                    if (season.Number == episode.Season)
+                    if(season.Number == episode.Season)
                     {
                         seasonEpisodes.Add(episode);
                     }
